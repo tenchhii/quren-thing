@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayah Order</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <a class="logo" href="#">AYAH <span>ORDER</span></a>
+      <div class="surah-tag">SURAH 76 · AL-INSAN</div>
+    </header>
+
+    <main>
+      <section id="gameScreen">
+
+        <section class="intro">
+          <p class="eyebrow">QURAN ORDERING CHALLENGE</p>
+          <h1>Arrange the <span>Ayahs.</span></h1>
+          <p class="description">
+            All 31 ayahs are shuffled by the ultimate shuffler (Layyah).
+            Put them back into the order they appear in Surah Al-Insan.
+          </p>
+        </section>
+
+        <section class="stats">
+          <div class="stat">
+            <span class="stat-label">TOTAL AYAHS</span>
+            <strong id="total">31</strong>
+          </div>
+
+          <div class="stat">
+            <span class="stat-label">CORRECT POSITIONS</span>
+            <strong id="score">0 / 31</strong>
+          </div>
+
+          <div class="stat">
+            <span class="stat-label">PROGRESS</span>
+            <strong id="percent">0%</strong>
+          </div>
+        </section>
+
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="toolbar">
+          <p id="status">Loading Arabic text...</p>
+
+          <div class="toolbar-buttons">
+            <button id="viewSurahBtn" class="secondary">
+              View Surah
+            </button>
+
+            <button id="numberModeSwitch" class="secondary">
+              Number Mode
+            </button>
+
+            <button id="checkBtn" class="primary" disabled>
+              Check order
+            </button>
+
+            <button id="shuffleBtn" class="secondary" disabled>
+              Shuffle
+            </button>
+          </div>
+        </div>
+
+        <div id="ayahList" class="ayah-list"></div>
+
+        <p class="footer-note">
+          Quran text is displayed for study. Please verify the text with a trusted Quran source.
+        </p>
+
+      </section>
+    </main>
+  </div>
+
+  <!-- FULL SURAH READER -->
+  <div id="surahModal" class="surah-modal">
+    <div class="surah-modal-content">
+
+      <div class="surah-modal-header">
+        <h2>Surah Al-Insan</h2>
+
+        <button
+          id="closeSurahBtn"
+          class="secondary"
+          aria-label="Close Surah reader"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div id="fullSurah" class="full-surah"></div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
